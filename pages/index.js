@@ -14,11 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center justify-center h-screen">
-        {session ? (
-          <Logged signOut={signOut} session={session} />
-        ) : (
-          <Login signIn={signIn} />
-        )}
+        {session ? <Logged signOut={signOut} /> : <Login signIn={signIn} />}
       </main>
     </>
   );
